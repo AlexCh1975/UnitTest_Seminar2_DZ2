@@ -116,4 +116,13 @@ public class Calculator {
         }
         return result;
     }
+
+    public static double computeAreaCircle(double radius){
+        return Math.PI * Math.pow(radius, 2);
+    }
+
+    public static double computeLengthCircle(double radius){
+//        return 2 * radius * Math.PI;
+        return 0;
+    }
 }

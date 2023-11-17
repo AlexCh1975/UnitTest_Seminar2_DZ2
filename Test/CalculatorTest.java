@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import seminars.first.model.Calculator;
+import seminars.second.LengthCircle;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -93,5 +94,18 @@ public class CalculatorTest {
                 .describedAs("Input error");
         System.setIn(inputStream);
         System.setOut(null);
+    }
+
+    @Test
+    void computeCircleRadiusWorksCorrectly(){
+        assertThat(Calculator.computeAreaCircle(10)).isEqualTo(314.1592653589793);
+    }
+
+    @Test
+    void computeLengthCircleWorksCorrectly(){
+        LengthCircle lengthCircle = new LengthCircle();
+        double culc = lengthCircle.computeLengthCircle(10);
+//        assertThat(culc).isEqualTo(62.83185307179586);
+        assertThat(culc).isEqualTo(63);
     }
 }
